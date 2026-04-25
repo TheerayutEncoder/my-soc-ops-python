@@ -11,16 +11,23 @@ Before committing any changes, ensure:
 
 ## Version Control
 
-**Commit and push changes frequently:**
-- After implementing each feature or fix
-- After passing tests and linting
-- Use clear, descriptive commit messages
-- Push to remote after local commits to backup work
+**Create Pull Requests instead of pushing directly to main:**
+- Create a feature branch for each task: `git checkout -b feat/description`
+- Commit changes frequently with clear messages
+- Push branch and create a PR for review
+- Never push directly to main branch
 
 ```bash
+# Start new feature
+git checkout -b feat/descriptive-name
+
+# Make changes, then commit
 git add .
 git commit -m "feat: descriptive message"
-git push
+
+# Push branch and create PR
+git push -u origin feat/descriptive-name
+# Then create PR via GitHub UI or gh CLI: gh pr create
 ```
 
 ## Project Overview
